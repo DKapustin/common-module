@@ -28,12 +28,14 @@ public class LogService implements LogRepository{
                 Debug debug = new Debug();
                 debug.setSystemTypeId(systemTypeId);
                 debug.setMethodParams(methodParams);
+                debugRepository.save(debug);
                 log.info("DEBUG SystemTypeId =" +  systemTypeId +"; MethodParams = " + methodParams);
                 break;
             case EXCEPTION:
                 Exception exception = new Exception();
                 exception.setSystemTypeId(systemTypeId);
                 exception.setMethodParams(methodParams);
+                exceptionRepository.save(exception);
                 log.info("EXCEPTION SystemTypeId =" +  systemTypeId +"; MethodParams = " + methodParams);
                 break;
             default:
