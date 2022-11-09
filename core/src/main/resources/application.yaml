@@ -1,7 +1,8 @@
 spring:
 
   datasource:
-    url: jdbc:postgresql://localhost:8081/postgres
+    url: jdbc:postgresql://localhost:5432/medical
     username: postgres
     password: kappatych20x1998
+    schema: classpath:exam/schema.sql
     driver-class-name: org.postgresql.Driver
